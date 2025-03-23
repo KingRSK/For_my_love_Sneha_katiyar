@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Envelope + Letter (Open/Close on Click)</title>
+    <link rel="stylesheet" href="./style1.css">
+</head>
+<body>
+    <div class="container">
+        <p class="instructions">Click on the letter to open it muahhh..</p>
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Dear Bulubu.</strong>
+                        <p>
+                            Aaj jo aap mere pai gussai ho i want to tell u ki i was working on this last night even when i was tired. thak gya tha socha tha kr lunga pura kl raat ko he but uk thinks never go as planned fir aaj pura din busy alg hogya mai. Sorry my love i always wanna suprise u with all my potential. I Love You. U keep doing for me I will give You everything of mine. No space now Muahhh.. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+        <div class="nextpg hide">
+            <p class="instructions3">Volume up Sweet song nothing else so relax</p>
+            <div class="instructions2 btn">
+                <a href="song.html">Click on me Bebs</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        const next = document.querySelector('.nextpg');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+            next.classList.toggle('view')
+            next.classList.replace('hide','view')
+        });
+    </script>
+</body>
+</html>
